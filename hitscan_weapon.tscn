@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccjl2qagb1i8f"]
+
+[ext_resource type="Script" uid="uid://ccb8fmcc0dbgc" path="res://hitscan_weapon.gd" id="1_kg4cf"]
+[ext_resource type="PackedScene" uid="uid://mfn2decaxdc" path="res://Glock2.glb" id="2_duimc"]
+
+[node name="HitscanWeapon" type="Node3D"]
+script = ExtResource("1_kg4cf")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+
+[node name="Glock2" parent="." instance=ExtResource("2_duimc")]
+transform = Transform3D(0.150579, 0, 0, 0, 0.150579, 0, 0, 0, 0.150579, 0.8, -0.2, -1)
