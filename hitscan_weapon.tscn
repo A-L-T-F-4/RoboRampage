@@ -3,10 +3,14 @@
 [ext_resource type="Script" uid="uid://ccb8fmcc0dbgc" path="res://hitscan_weapon.gd" id="1_kg4cf"]
 [ext_resource type="PackedScene" uid="uid://mfn2decaxdc" path="res://Glock2.glb" id="2_duimc"]
 
-[node name="HitscanWeapon" type="Node3D"]
+[node name="HitscanWeapon" type="Node3D" node_paths=PackedStringArray("weapon_mesh")]
 script = ExtResource("1_kg4cf")
+weapon_mesh = NodePath("Glock2")
 
 [node name="CooldownTimer" type="Timer" parent="."]
 
 [node name="Glock2" parent="." instance=ExtResource("2_duimc")]
 transform = Transform3D(0.150579, 0, 0, 0, 0.150579, 0, 0, 0, 0.150579, 0.8, -0.2, -1)
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -100)

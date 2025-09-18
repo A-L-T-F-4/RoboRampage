@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://kgw3bcah47vt"]
+[gd_scene load_steps=9 format=3 uid="uid://kgw3bcah47vt"]
 
 [ext_resource type="Script" uid="uid://teln1q1kk6va" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Script" uid="uid://bgel0w1krqr7p" path="res://Player/smooth_camera.gd" id="2_4ntmi"]
 [ext_resource type="Script" uid="uid://cipg8it4kc75" path="res://Player/crosshair.gd" id="3_btcbx"]
+[ext_resource type="PackedScene" uid="uid://ccjl2qagb1i8f" path="res://hitscan_weapon.tscn" id="4_fhl08"]
 [ext_resource type="ArrayMesh" uid="uid://cy3thvhj6m1m6" path="res://Glock.obj" id="4_gwnis"]
 [ext_resource type="PackedScene" uid="uid://mfn2decaxdc" path="res://Glock2.glb" id="5_k53q1"]
 
@@ -30,6 +31,8 @@ script = ExtResource("2_4ntmi")
 [node name="Glock3" parent="CameraPivot/SmoothCamera" instance=ExtResource("5_k53q1")]
 transform = Transform3D(0.150579, 0, 0, 0, 0.150579, 0, 0, 0, 0.150579, -0.8, -0.2, -1)
 
+[node name="HitscanWeapon" parent="CameraPivot/SmoothCamera/Glock3" instance=ExtResource("4_fhl08")]
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,6 +45,6 @@ layout_mode = 2
 script = ExtResource("3_btcbx")
 
 [node name="Glock" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.140859, -0.00308987, -0.00986049, 0.00238839, 0.140861, -0.0100215, 0.0100535, 0.00982791, 0.140536, 0.576897, 0.0165299, -0.796438)
+transform = Transform3D(0.140859, -0.00308987, -0.00986049, 0.00238839, 0.140861, -0.0100215, 0.0100535, 0.00982791, 0.140536, 0.702347, 0.338913, -0.796438)
 visible = false
 mesh = ExtResource("4_gwnis")
